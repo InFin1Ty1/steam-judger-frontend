@@ -1,0 +1,11 @@
+# backend/wrangler.toml (示例片段)
+name = "steam-judger-1" # Worker 名称
+main = "src/index.ts"
+compatibility_date = "2025-04-10" # 使用适合你项目的日期
+
+# D1 数据库绑定
+[[d1_databases]]
+binding = "DB" # 在代码中访问数据库时使用的绑定名称 (例如 c.env.DB)
+database_name = "Steam-Judger-Database" # 你在 Cloudflare 上创建的 D1 数据库名称
+database_id = "a8784240-8cd5-4093-8f89-438f25710793" # D1 数据库的 UUID
+# preview_database_id = "your_preview_d1_database_uuid" # 可选，用于本地预览环境
